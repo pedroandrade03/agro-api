@@ -7,6 +7,7 @@ class UserAddress(BaseModel):
         "user.User", related_name="addresses", on_delete=models.CASCADE
     )
     cep = models.CharField(max_length=10)
+    city = models.CharField(max_length=255, null=True, blank=True)
     street = models.CharField(max_length=255)
     neighborhood = models.CharField(max_length=255)
     number = models.CharField(max_length=10)
