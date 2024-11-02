@@ -12,10 +12,18 @@ class Product(BaseModel):
     working_hours = models.CharField(max_length=100)
     image = models.ImageField(upload_to="products", null=True, blank=True)
     user = models.ForeignKey(
-        "user.User", related_name="products", on_delete=models.CASCADE, null=True, blank=True
+        "user.User",
+        related_name="products",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
     )
     address = models.ForeignKey(
-        "user.UserAddress", related_name="products", on_delete=models.CASCADE, null=True, blank=True
+        "user.UserAddress",
+        related_name="products",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
     )
 
     def __str__(self):

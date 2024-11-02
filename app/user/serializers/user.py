@@ -9,4 +9,4 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = "password", "username", "email", "addresses"
+        fields = "__all__"
