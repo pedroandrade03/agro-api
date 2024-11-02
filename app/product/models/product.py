@@ -10,6 +10,7 @@ class Product(BaseModel):
     whatsapp = models.CharField(max_length=20)
     is_service = models.BooleanField()
     working_hours = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="products", null=True, blank=True)
 
     def __str__(self):
         return self.title
